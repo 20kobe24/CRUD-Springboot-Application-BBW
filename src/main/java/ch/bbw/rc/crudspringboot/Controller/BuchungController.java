@@ -35,6 +35,15 @@ public class BuchungController {
         return buchungService.updateBuchung(buchung);
     }
 
+    @PostMapping
+    public Buchung createBuchung(@RequestBody Buchung buchung) {
+        return buchungService.createBuchung(buchung);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteBuchung(@PathVariable Long id) {
+        buchungService.deleteBuchung(id);
+    }
 
 
 }
