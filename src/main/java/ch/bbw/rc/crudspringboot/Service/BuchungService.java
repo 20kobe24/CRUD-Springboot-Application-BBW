@@ -33,4 +33,12 @@ public class BuchungService {
         return buchungRepository.save(buchung);
     }
 
+    public Buchung createBuchung(Buchung buchung) {
+        return buchungRepository.save(buchung);
+    }
+
+    public void deleteBuchung(Long id) {
+        buchungRepository.deleteById(id);
+    }
+
 }
