@@ -28,4 +28,12 @@ public class FelfelProduktService {
         return felfelProduktRepository.save(felfelProdukt);
     }
 
+    public FelfelProdukt createFelfelProdukt(FelfelProdukt felfelProdukt) {
+        return felfelProduktRepository.save(felfelProdukt);
+    }
+
+    public void deleteFelfelProdukt(Long id) {
+        felfelProduktRepository.deleteById(id);
+    }
+
 }
