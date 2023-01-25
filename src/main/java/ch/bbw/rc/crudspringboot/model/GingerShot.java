@@ -7,14 +7,14 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "GingershotUser")
+@Table(name = "ginger_shot")
 @Data
-public class GingershotUser {
+
+public class GingerShot {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
 
     @Column(nullable = false)
     private Integer price;
-
 }
