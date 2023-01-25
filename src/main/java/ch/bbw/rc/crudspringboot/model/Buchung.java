@@ -26,7 +26,7 @@ public class Buchung {
     private Boolean halb_taetig;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", insertable = true, updatable = true)
     private User user;
 
 

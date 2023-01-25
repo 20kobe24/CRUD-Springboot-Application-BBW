@@ -34,11 +34,11 @@ public class User {
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role_id", insertable = true, updatable = true)
     private Role role;
 
     @OneToMany(mappedBy = "user")
-    private Set<Buchung> buchungen;
+    private List<Buchung> buchungen;
 
     @ManyToMany
     @JoinTable(name = "felfelprodukt_user",
