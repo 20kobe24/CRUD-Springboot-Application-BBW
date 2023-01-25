@@ -25,7 +25,4 @@ public class Buchung {
     @Column(nullable = false, name = "halb_taetig")
     private Boolean halb_taetig;
 
-
-
-
 }
