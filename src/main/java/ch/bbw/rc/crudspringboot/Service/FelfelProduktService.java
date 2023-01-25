@@ -19,5 +19,8 @@ public class FelfelProduktService {
         return felfelProduktRepository.findAll();
     }
 
+    public FelfelProdukt getFelfelProduktById(Long id) {
+        return felfelProduktRepository.findById(id).orElse(null);
+    }
 
 }
