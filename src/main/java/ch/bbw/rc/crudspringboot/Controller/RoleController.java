@@ -2,6 +2,7 @@ package ch.bbw.rc.crudspringboot.Controller;
 
 import ch.bbw.rc.crudspringboot.Service.RoleService;
 import ch.bbw.rc.crudspringboot.model.Role;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ public class RoleController {
         this.roleService = roleService;
     }
 
+    @Operation(summary = "Get all Roles")
     @GetMapping
     public List<Role> getAllRoles() {
         return roleService.getAllRoles();
