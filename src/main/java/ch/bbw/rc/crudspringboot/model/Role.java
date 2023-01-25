@@ -26,6 +26,10 @@ public class Role {
     @Column(nullable = false, name = "name")
     private String name;
 
+    @OneToMany(mappedBy = "role")
+    private List<User> users = new ArrayList<>();
+
+
 }
 
 
