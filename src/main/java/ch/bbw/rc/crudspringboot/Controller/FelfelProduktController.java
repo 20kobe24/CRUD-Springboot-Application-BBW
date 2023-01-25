@@ -19,4 +19,23 @@ public class FelfelProduktController {
         return felfelProduktService.getAllFelfelProdukts();
     }
 
+    @GetMapping("/{id}")
+    public FelfelProdukt getFelfelProduktById(@PathVariable Long id) {
+        return felfelProduktService.getFelfelProduktById(id);
+    }
+
+    @PutMapping("/{id}")
+    public FelfelProdukt updateFelfelProdukt(@PathVariable Long id, @RequestBody FelfelProdukt felfelProdukt) {
+        return felfelProduktService.updateFelfelProdukt(id, felfelProdukt);
+    }
+
+    @PostMapping
+    public FelfelProdukt createFelfelProdukt(@RequestBody FelfelProdukt felfelProdukt) {
+        return felfelProduktService.createFelfelProdukt(felfelProdukt);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteFelfelProdukt(@PathVariable Long id) {
+        felfelProduktService.deleteFelfelProdukt(id);
+    }
 }
