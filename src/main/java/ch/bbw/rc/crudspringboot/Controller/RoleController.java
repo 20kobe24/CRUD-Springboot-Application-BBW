@@ -3,6 +3,7 @@ package ch.bbw.rc.crudspringboot.Controller;
 import ch.bbw.rc.crudspringboot.Service.RoleService;
 import ch.bbw.rc.crudspringboot.model.Role;
 import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("api/role")
 public class RoleController {
+
+    @Autowired
     private RoleService roleService;
 
     public RoleController(RoleService roleService) {
