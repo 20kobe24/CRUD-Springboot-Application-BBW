@@ -46,5 +46,11 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "felfelprodukt_id"))
     List<FelfelProdukt> felfelProdukts = new ArrayList<>();
 
+    @ManyToMany
+    @JoinTable(name = "gingershot_user",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "gingershot_id"))
+    List<GingerShot> gingerShots = new ArrayList<>();
+
 
 }
