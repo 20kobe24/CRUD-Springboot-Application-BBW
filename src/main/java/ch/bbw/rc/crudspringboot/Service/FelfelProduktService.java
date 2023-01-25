@@ -23,4 +23,9 @@ public class FelfelProduktService {
         return felfelProduktRepository.findById(id).orElse(null);
     }
 
+    public FelfelProdukt updateFelfelProdukt(Long id, FelfelProdukt felfelProdukt) {
+        felfelProdukt.setId(id);
+        return felfelProduktRepository.save(felfelProdukt);
+    }
+
 }
