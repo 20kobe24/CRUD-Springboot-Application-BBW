@@ -1,30 +1,34 @@
 package ch.bbw.rc.crudspringboot.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "user")
-@Data
 public class User {
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id", unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "vorname")
     private String vorname;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "nachname")
     private String nachname;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "email")
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "password")
     private String password;
-
 
 }
