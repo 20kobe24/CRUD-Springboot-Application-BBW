@@ -40,5 +40,11 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Buchung> buchungen;
 
+    @ManyToMany
+    @JoinTable(name = "felfelprodukt_user",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "felfelprodukt_id"))
+    List<FelfelProdukt> felfelProdukts = new ArrayList<>();
+
 
 }
