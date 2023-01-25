@@ -19,11 +19,11 @@ public class BuchungController {
     public List<Buchung> getAllBuchungen() {
         return buchungService.getAllBuchungen();
     }
-
-    @GetMapping("/halbtaetig")
-    public List<Buchung> getAllHalbTaetigBuchungen(@RequestParam(value = "active", defaultValue = "true") boolean active) {
-        return buchungService.getAllHalbTaetigBuchungen(active);
-    }
+//
+//    @GetMapping("/halbtaetig")
+//    public List<Buchung> getAllHalbTaetigBuchungen(@RequestParam(value = "active", defaultValue = "true") boolean active) {
+//        return buchungService.getAllHalbTaetigBuchungen(active);
+//    }
 
     @GetMapping("/{id}")
     public Buchung getBuchungById(@PathVariable Long id) {

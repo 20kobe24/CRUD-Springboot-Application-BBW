@@ -20,10 +20,10 @@ public class BuchungService {
     public List<Buchung> getAllBuchungen() {
         return buchungRepository.findAll();
     }
-
-    public List<Buchung> getAllHalbTaetigBuchungen(boolean active) {
-        return buchungRepository.findByHalbTaetigAndStatus(active, true);
-    }
+//
+//    public List<Buchung> getAllHalbTaetigBuchungen(boolean active) {
+//        return buchungRepository.findByHalbTaetigAndStatus(active, true);
+//    }
 
     public Buchung getBuchungById(Long id) {
         return buchungRepository.findById(id).orElse(null);

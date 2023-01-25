@@ -1,5 +1,6 @@
 package ch.bbw.rc.crudspringboot.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,5 +27,8 @@ public class Role {
     private String name;
 
 }
+
+
+
 
 
