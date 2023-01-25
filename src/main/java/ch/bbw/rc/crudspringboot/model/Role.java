@@ -19,11 +19,11 @@ import java.util.Set;
 public class Role {
     @Id
     @Column(name = "id", unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = true)
+    @Column(nullable = false, name = "name")
     private String name;
-
 
 }
 
