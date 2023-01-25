@@ -25,4 +25,12 @@ public class BuchungService {
         return buchungRepository.findByHalbTaetigAndStatus(active, true);
     }
 
+    public Buchung getBuchungById(Long id) {
+        return buchungRepository.findById(id).orElse(null);
+    }
+
+    public Buchung updateBuchung(Buchung buchung) {
+        return buchungRepository.save(buchung);
+    }
+
 }
